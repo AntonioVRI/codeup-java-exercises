@@ -1,9 +1,10 @@
 public class Person {
     private String name;
 
+
 //    return this person's name
     public String getName(){
-        return this.name;
+        return name;
     }
 
 //    change property: name to the value given
@@ -13,7 +14,7 @@ public class Person {
 
 //    print to console using the name
     public void sayHello(){
-        System.out.println("Hello, " + this.name);
+        System.out.println("Hello, " + name);
     }
 
 //    Person() method
@@ -22,6 +23,16 @@ public class Person {
     }
 
     public static void main(String[] args) {
+        Person person1 = new Person("Anthony");
+        person1.sayHello();
+        System.out.println(person1.getName());
+
+        Person person2 = person1;
+
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+        person1.setName("Jane");
+        
 
     }
 }

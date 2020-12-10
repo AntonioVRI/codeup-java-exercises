@@ -3,18 +3,13 @@ package util;
 public class InputTest {
 
     public static void main(String[] args) {
+        System.out.println("Please follow the instructions");
 
-//        instantiated util.Input
-        Input text = new Input();
+        Input input = new Input();
 
-//        call 'text' and 'getString'
-        text.getString();
-        System.out.println(text.yesNo());
+        System.out.println(input.yesNo());
+        System.out.println(input.getInt(1, 10));
+        System.out.println(input.getDouble(1, 10));
 
-        text.getInt();
-        System.out.println(text.getInt());
-
-        text.getDouble();
-        System.out.println(text.getDouble());
     }
 }
