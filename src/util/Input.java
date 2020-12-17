@@ -32,7 +32,7 @@ public class Input {
 
 //    getInt()
 
-    public int getInt(){
+    public int getInt(int i, int i1, String s){
         System.out.println("Enter an int.");
         return this.sc.nextInt();
     }
