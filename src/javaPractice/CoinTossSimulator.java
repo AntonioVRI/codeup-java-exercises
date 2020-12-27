@@ -1,10 +1,10 @@
-package
+package javaPractice;
 
 import java.util.Random;
 
 public class CoinTossSimulator {
 
-	class Coin {
+	static class Coin {
 
 		private String sideUp;
 
@@ -49,7 +49,7 @@ public class CoinTossSimulator {
 
 		// Create an instance of the Coin class.
 		CoinTossSimulator coinTossSimulator = new CoinTossSimulator();
-		Coin myCoin = coinTossSimulator.new Coin();
+		Coin myCoin = new Coin();
 
 		// Display initial toss
 		System.out.println("The side initially facing up: "
