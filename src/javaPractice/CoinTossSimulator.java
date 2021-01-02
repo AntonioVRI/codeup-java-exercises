@@ -65,7 +65,7 @@ public class CoinTossSimulator {
 			// Toss the coin.
 			myCoin.toss();
 
-			// Display the side facing up.
+			// Display this side facing up.
 			System.out.println("Toss: " + myCoin.getSideUp());
 
 			if ("heads".equals(myCoin.getSideUp())) {
