@@ -25,7 +25,20 @@ public class WordSeparator {
 		// close keyboard
 		keyboard.close();
 
-		// need new array list to format
+		List<String> sentenceElements = Arrays.stream(
+				userInput.split("(?=[A-Z])")).collect(Collectors.toList());
+
+		// properly format sentence
+		List<String> sentence = new ArrayList<>();
+//		for (int x = 0; x < sentenceElements.size(); x++) {
+//			if (x == 0) {
+//				sentence.add(sentenceElements.get(x));
+//			} else {
+//				sentence.add(sentenceElements.get(x).toLowerCase());
+//			}
+//		}
+
+		System.out.println(String.join(" ", sentence));
 	}
 
 }
