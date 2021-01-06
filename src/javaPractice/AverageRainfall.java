@@ -3,10 +3,7 @@ package javaPractice;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-/**
- * This program demonstrates how to calculate the average rainfall.
- */
+//commit to test ssh key on github
 
 public class AverageRainfall {
 
