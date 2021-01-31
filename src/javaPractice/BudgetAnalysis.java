@@ -16,6 +16,37 @@ public class BudgetAnalysis {
         // Get the budget amount.
         System.out.print("Enter your budget for the month: ");
         double monthlyBudget = keyboard.nextDouble();
+        // Get each expense, keep track of total.
+        double expense;
+        double totalExpenses = 0.0;
+        do {
+            // Get an expense amount.
+            System.out.print("Enter an expense, or a negative "
+                    + "number to quit: ");
+            expense = keyboard.nextDouble();
+
+            totalExpenses += expense;
+
+        } while (expense >= 0);
+
+        // Display the amount after expenses.
+        double balance = calculateAmountOverBudget(monthlyBudget, totalExpenses);
+        if (balance < 0) {
+            System.out.println("You are OVER budget by $"
+                    + dollar.format(Math.abs(balance)));
+        } else if (balance > 0) {
+            System.out.println("You are UNDER budget by $"
+                    + dollar.format(balance));
+        } else {
+            System.out.println("You spent the budget amount exactly.");
+        }
+
+        keyboard.close();
+    }
+
+    static double calculateAmountOverBudget(double monthlyBudget,
+                                            double totalExpenses) {
+        return monthlyBudget - totalExpenses;
     }
 
 }
