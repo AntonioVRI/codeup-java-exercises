@@ -9,7 +9,7 @@ public class charFlip {
         if(s.charAt(0) == s.charAt(s.length()-1))
             return "Two's a pair.";
 
-
+        return s.substring(s.length()-1) + s.substring(1,s.length()-1) + s.substring(0,1);
     }
 
 }
