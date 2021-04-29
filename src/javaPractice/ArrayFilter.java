@@ -18,6 +18,12 @@ public class ArrayFilter {
             Pattern p = Pattern.compile("\\D+");
             Matcher m = p.matcher(current);
 
-
+            if (!m.find() && !unique.contains(current)) {
+                list.add(current);
+                unique.add(current);
+            }
+        }
+        String[] filteredArray = new String[list.size()];
+        return list.toArray(filteredArray);
     }
 }
