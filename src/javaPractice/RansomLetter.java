@@ -9,4 +9,17 @@ public class RansomLetter {
         if(str2_new.length==0)
             return true;
         for (int j = 0; j < str2_new.length; j++) {
+            flag = false;
+            for (int i = 0; i < str1_new.length; i++) {
+                if (str2_new[j] == str1_new[i] && i != k) {
+                    k = i;
+                    flag = true;
+                    continue;
+                }
+            }
+            if(flag==false)
+                return flag;
         }
+        return flag;
+    }
+}
