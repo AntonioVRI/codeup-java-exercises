@@ -15,9 +15,9 @@ public class Anagrams {
     public static void main(String[] args) {
 
         Scanner sc=new Scanner(System.in);
-        String A=sc.next();
-        String B=sc.next();
-        boolean ret=isAnagram(A,B);
+        String a=sc.next();
+        String b=sc.next();
+        boolean ret=isAnagram(a,b);
         if(ret)System.out.println("Anagrams");
         else System.out.println("Not Anagrams");
     }

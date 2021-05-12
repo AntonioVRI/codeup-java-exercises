@@ -13,7 +13,7 @@ public class validateEmail {
                 dot = true;
             }
         }
-        result = at && dot;
+
         return result;
     }
 
