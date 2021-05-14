@@ -6,12 +6,27 @@ import java.util.Scanner;
 public class Anagrams {
 
     static boolean isAnagram(String firstWord, String secondWord) {
-        char[] word1 = firstWord.toLowerCase().replaceAll("[\\s]", "").toCharArray();
-        char[] word2 = secondWord.toLowerCase().replaceAll("[\\s]", "").toCharArray();
-        Arrays.sort(word1);
-        Arrays.sort(word2);
-        return Arrays.equals(word1, word2);
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+
+        char[] a = s1.toLowerCase().toCharArray();
+        char[] b = s2.toLowerCase().toCharArray();
+        boolean anagram = true;
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        for(int i = 0; i < a.length; i++) {
+            if(a[i] != b[i]) {
+                anagram = false;
+            }
+        }
+
+        return anagram;
     }
+
+
+
     public static void main(String[] args) {
 
         Scanner sc=new Scanner(System.in);
