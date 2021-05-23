@@ -38,6 +38,14 @@ public class Anagrams {
             frequency[(int) c - 97]--;
         }
 
+        boolean anagrams = true;
+        for (int i : frequency) {
+            if (i != 0) {
+                anagrams = false;
+                break;
+            }
+        }
+
         return anagrams;
     }
 }
