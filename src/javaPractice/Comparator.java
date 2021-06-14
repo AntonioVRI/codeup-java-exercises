@@ -3,6 +3,8 @@ package javaPractice;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.stream.Collectors;
+
 public class Comparator {
 
     class Student {
@@ -68,4 +70,19 @@ public class Comparator {
             return students;
         }
     }
+
+//    public List<Integer> doubling(List<Integer> nums) {
+//        return nums.stream()
+//                .map(n -> n * 2)
+//                .collect(Collectors.toList());
+//    }
+//
+//    public List<Integer> doubling(List<Integer> nums) {
+//        List<Integer> result = new ArrayList<>();
+//        for (Integer n:nums) {
+//            result.add(n * 2);
+//        }
+//        return result;
+//    }
+
 }
