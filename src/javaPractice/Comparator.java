@@ -71,18 +71,23 @@ public class Comparator {
         }
     }
 
-//    public List<Integer> doubling(List<Integer> nums) {
-//        return nums.stream()
-//                .map(n -> n * 2)
-//                .collect(Collectors.toList());
-//    }
-//
-//    public List<Integer> doubling(List<Integer> nums) {
-//        List<Integer> result = new ArrayList<>();
-//        for (Integer n:nums) {
-//            result.add(n * 2);
-//        }
-//        return result;
-//    }
+    public List<Integer> doubling(List<Integer> nums) {
+        return nums.stream()
+                .map(n -> n * 2)
+                .collect(Collectors.toList());
+    }
+
+    public List<Integer> doubling(List<Integer> nums) {
+        List<Integer> result = new ArrayList<>();
+        for (Integer n:nums) {
+            result.add(n * 2);
+        }
+        return result;
+    }
+    public List<Integer> doubling(List<Integer> nums) {
+        nums.replaceAll(n -> n * 2);
+        return nums;
+    }
+
 
 }
