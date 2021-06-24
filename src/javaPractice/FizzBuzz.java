@@ -73,4 +73,20 @@ class FizzBuzz {
         return false;
     }
 
+    int numberNodes = countNodes(node);
+    return isComplete(node, 0, numberNodes);
+}
+    public Boolean isCompleteTree(TreeNode node) {
+    private Boolean isComplete(TreeNode node, int index, int numberNodes) {
+        if (node == null)
+            return true;
+
+        if (index > numberNodes)
+            return false;
+
+        return isComplete(node.left(), 2 * index + 1, numberNodes) &&
+                isComplete(node.right(), 2 * index + 2, numberNodes);
+    }
+
+
 }
