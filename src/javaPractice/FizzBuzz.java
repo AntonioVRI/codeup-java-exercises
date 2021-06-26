@@ -88,5 +88,11 @@ class FizzBuzz {
                 isComplete(node.right(), 2 * index + 2, numberNodes);
     }
 
+    private Integer countNodes(TreeNode node){
+            if (node == null) {
+                return 0;
+            }
+            return 1 + countNodes(node.left()) + countNodes(node.right());
+        }
 
 }
