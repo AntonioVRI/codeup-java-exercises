@@ -47,52 +47,22 @@ class FizzBuzz {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }
-
-    public String decode(String code) {
-        String decoded = "";
-        int lastCharValue = 'z';
-        int alphabetLength = 'z' - 'a' + 1;
-//        for (char character : code.toCharArray()) {
-//            int charNoRotation = character + 5;
-//            int charValue = charNoRotation < lastCharValue ? charNoRotation : charNoRotation - alphabetLength;
-//            decoded += (char) charValue;
-//        }
-        return decoded;
-    }
-
-    public Boolean sumsToTarget(Integer[] arr, Integer target) {
-        Map<Integer, Integer> numMap = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            int complement = target - arr[i];
-            if (numMap.containsKey(complement)) {
-                return true;
-            } else {
-                numMap.put(arr[i], i);
+    public String findLongestCommonSequence(String s1, String s2) {
+        String result = "";
+        for (int length = s1.length(); length > 0; length--) {
+            int startIndex = 0;
+            while (startIndex + length <= s1.length()) {
+                String current = s1.substring(startIndex, startIndex + length);
+                if (s2.contains(current)) {
+                    result = current;
+                    break;
+                }
+                startIndex++;
+            }
+            if (result.length() != 0) {
+                break;
             }
         }
-        return false;
+        return result;
     }
-
-    int numberNodes = countNodes(node);
-    return isComplete(node, 0, numberNodes);
-}
-    public Boolean isCompleteTree(TreeNode node) {
-    private Boolean isComplete(TreeNode node, int index, int numberNodes) {
-        if (node == null)
-            return true;
-
-        if (index > numberNodes)
-            return false;
-
-        return isComplete(node.left(), 2 * index + 1, numberNodes) &&
-                isComplete(node.right(), 2 * index + 2, numberNodes);
-    }
-
-    private Integer countNodes(TreeNode node){
-            if (node == null) {
-                return 0;
-            }
-            return 1 + countNodes(node.left()) + countNodes(node.right());
-        }
-
 }
