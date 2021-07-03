@@ -1,4 +1,5 @@
 package javaPractice;
+import javax.swing.tree.TreeNode;
 import java.util.*;
 class FizzBuzz {
     public static void main(String args[]) {
@@ -47,6 +48,7 @@ class FizzBuzz {
             return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }
+
     public String findLongestCommonSequence(String s1, String s2) {
         String result = "";
         for (int length = s1.length(); length > 0; length--) {
@@ -64,5 +66,15 @@ class FizzBuzz {
             }
         }
         return result;
+    }
+
+    public Boolean isStrictTree(TreeNode node) {
+        if (node == null) {
+            return true;
+        }
+        if ((node.left() == null && node.right() != null) || (node.left() != null && node.right() == null)) {
+            return false;
+        }
+        return isStrictTree(node.left()) && isStrictTree(node.right());
     }
 }
