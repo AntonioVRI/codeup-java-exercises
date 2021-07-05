@@ -77,4 +77,34 @@ class FizzBuzz {
         }
         return isStrictTree(node.left()) && isStrictTree(node.right());
     }
+
+    public String findLongestPalindrome(String word) {
+
+        String longestPalindrome = "";
+        for (int i = 0; i < word.length(); i++) {
+            String current = findLongestPalindromeInternal(word.substring(i, word.length()));
+            if (longestPalindrome.length() < current.length()) {
+                longestPalindrome = current;
+            }
+        }
+        return longestPalindrome;
+    }
+
+    public String findLongestPalindromeInternal(String word) {
+        String longestPalindrome;
+
+        int index = word.length();
+        while (index > 0 && !isPalindrome(word.substring(0, index))) {
+            index--;
+        }
+        longestPalindrome = word.substring(0, index);
+
+        return longestPalindrome;
+    }
+
+    public boolean isPalindrome(String word) {
+
+        return true;
+
+    }
 }
